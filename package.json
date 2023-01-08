@@ -1,0 +1,33 @@
+{
+  "name": "kanji-focus",
+  "version": "0.0.0",
+  "displayName": "KanjiFocus",
+  "private": "true",
+  "author": "Piotr Grabowski",
+  "description": "Highlight familiar kanji from Anki cards on websites",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "serve:firefox": "web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",
+    "serve:chrome": "web-ext run -t chromium --start-url \"https://google.com\" --source-dir ./dist/",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@samrum/vite-plugin-web-extension": "~3.0.0",
+    "@sveltejs/vite-plugin-svelte": "~1.0.2",
+    "@tsconfig/svelte": "~3.0.0",
+    "@types/webextension-polyfill": "~0.9.0",
+    "svelte": "~3.49.0",
+    "svelte-check": "~2.8.1",
+    "svelte-preprocess": "~4.10.7",
+    "tslib": "~2.4.0",
+    "typescript": "^4.7.4",
+    "vite": "~3.0.9",
+    "web-ext": "~7.2.0"
+  },
+  "dependencies": {
+    "webextension-polyfill": "~0.10.0"
+  },
+  "type": "module"
+}
